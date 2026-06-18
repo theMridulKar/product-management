@@ -2,6 +2,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\ProductController;
 
 // public routes auth
 Route::post('/register', [AuthController::class, 'register']);
@@ -15,5 +16,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout']);
     // categories
     Route::apiResource('categories',CategoryController::class);
+    // products
+    Route::apiResource('products', ProductController::class);
 
 });
