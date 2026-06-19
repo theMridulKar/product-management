@@ -6,6 +6,7 @@ import DashboardLayout from './layouts/DashboardLayout';
 import LoginPage from './pages/auth/LoginPage';
 import RegisterPage from './pages/auth/RegisterPage';
 import DashboardPage from './pages/DashboardPage';
+import CategoriesPage from './pages/CategoriesPage';
 
 function App() {
     return (
@@ -19,9 +20,12 @@ function App() {
 
                 <Route element={<DashboardLayout />}>
                     <Route path="/dashboard" element={<DashboardPage />} />
+                    <Route path="/categories" element={<CategoriesPage />}/>
                 </Route>
 
+
                 <Route path="*" element={<Navigate to="/login" />} />
+
 
             </Routes>
         </BrowserRouter>
