@@ -1,4 +1,6 @@
-# Local Installation Guide
+<details>
+<summary>Local Installation Guide</summary>
+
 ### Prerequisites
 Before running the project, make sure the following software is installed:
 * PHP 8.2+
@@ -100,41 +102,14 @@ http://localhost:5173/register
 http://localhost:5173/login
 ```
 ---
+</details>
 
 
 
 
+<details>
+<summary>Product Management System API Documentation</summary>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Product Management System API Documentation
 ## Base URL
 ```http
 http://127.0.0.1:8000/api
@@ -475,9 +450,12 @@ DELETE /products/1
 - MySQL
 
 ---
+</details>
 
 
-## Live Link:
+<details>
+<summary>Live Link</summary>
+
 ```text
 https://product-management-six-nu.vercel.app/
 ```
@@ -496,6 +474,8 @@ As a result:
 - Email notification functionality may not work on the deployed environment due to SMTP connection restrictions.
 
 Email notifications work correctly in local development when using valid Gmail SMTP credentials and a google app 16 character password
+</details>
+
 
 # Author
 **Mridul Kar**
