@@ -30,6 +30,7 @@ export default function RegisterPage() {
                 name: formData.name,
                 email: formData.email,
                 password: formData.password,
+                password_confirmation: formData.password_confirmation
             };
             const response = await AuthRepository.register(payload);
             toast.success(response.data.message);
