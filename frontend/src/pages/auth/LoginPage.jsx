@@ -20,10 +20,16 @@ export default function LoginPage() {
         e.preventDefault();
         try {
             setLoading(true);
+
             const response = await AuthRepository.login(formData);
             localStorage.setItem('token', response.data.data.token);
+
+            const profile = await AuthRepository.profile();
+            localStorage.setItem('user', JSON.stringify(profile.data.data));
+
             toast.success(response.data.message);
             navigate('/dashboard');
+        
         } catch (error) {
             toast.error(error?.response?.data?.message || 'Something went wrong');
         } finally {
