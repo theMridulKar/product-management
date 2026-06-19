@@ -16,7 +16,7 @@ class CategoryController extends Controller
 
     public function index(Request $request)
     {
-        $categories = $this->categoryRepository->getAll($request->integer('per_page', 10));
+        $categories = $this->categoryRepository->getAll($request->integer('per_page', 10), $request->search);
 
         return response()->json([
             'success' => true,

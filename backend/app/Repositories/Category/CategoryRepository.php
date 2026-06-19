@@ -5,9 +5,11 @@ use App\Models\Category;
 
 class CategoryRepository implements CategoryRepositoryInterface
 {
-    public function getAll(int $perPage = 10)
+    public function getAll(int $perPage = 10, ?string $search = null)
     {
-        return Category::query()->latest()->paginate($perPage);
+        return Category::query()->when($search, fn ($query) =>
+                    $query->where('name', 'like', "%{$search}%"
+                ))->latest()->paginate($perPage);
     }
 
     public function findById(int $id)
