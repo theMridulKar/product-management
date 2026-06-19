@@ -8,23 +8,23 @@ export default function DashboardPage() {
 
             <div className="row g-4">
 
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                     <div className="card border-0 shadow-sm">
                         <div className="card-body">
                             <h6 className="text-muted">Total Categories</h6>
                             <h2 className="fw-bold"> 0 </h2>
                         </div>
                     </div>
-                </div>
+                </div> */}
 
-                <div className="col-md-6">
+                {/* <div className="col-md-6">
                     <div className="card border-0 shadow-sm">
                         <div className="card-body">
                             <h6 className="text-muted">Total Products</h6>
                             <h2 className="fw-bold">0</h2>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 
             </div>
         </div>

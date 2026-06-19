@@ -16,7 +16,7 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
-        $products = $this->productRepository->getAll($request->integer('per_page', 10));
+        $products = $this->productRepository->getAll($request->integer('per_page', 10), $request->search);
 
         return response()->json([
             'success' => true,
