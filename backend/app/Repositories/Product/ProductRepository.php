@@ -5,9 +5,11 @@ use App\Models\Product;
 
 class ProductRepository implements ProductRepositoryInterface
 {
-    public function getAll(int $perPage = 10)
+    public function getAll(int $perPage = 10, ?string $search = null)
     {
-        return Product::with('category')->latest()->paginate($perPage);
+        return Product::with('category')->when($search, fn ($query) =>
+                    $query->where('name', 'like', "%{$search}%"
+                ))->latest()->paginate($perPage);
     }
 
     public function findById(int $id)

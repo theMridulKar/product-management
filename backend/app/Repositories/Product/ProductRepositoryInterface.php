@@ -3,7 +3,7 @@ namespace App\Repositories\Product;
 
 interface ProductRepositoryInterface
 {
-    public function getAll(int $perPage = 10);
+    public function getAll(int $perPage = 10, ?string $search = null);
 
     public function findById(int $id);
 
